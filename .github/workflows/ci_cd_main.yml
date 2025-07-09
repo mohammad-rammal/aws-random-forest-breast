@@ -15,3 +15,11 @@ jobs:
       - name: Build Docker Images
         run: |
           docker compose up -d --build
+
+      - name: Start Docker Services
+        run: |
+          docker compose up -d --wait
+
+      - name: Run the tests
+        run: |
+          docker compose exec -T backend pytest
