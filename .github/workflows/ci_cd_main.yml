@@ -1,0 +1,17 @@
+name: Run CI/CD on Main Branch
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (Copying) repositary
+        uses: actions/checkout@v4
+        
+      - name: Build Docker Images
+        run: |
+          docker compose up --build
