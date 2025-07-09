@@ -27,3 +27,13 @@ jobs:
       - name: Run the tests
         run: |
           docker compose exec -T backend pytest
+
+  cd:
+    needs: ci
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (Copying) repositary
+        uses: actions/checkout@v4
+
+      
