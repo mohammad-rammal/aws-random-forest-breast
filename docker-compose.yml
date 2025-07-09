@@ -9,10 +9,12 @@ services:
       - ./data-storage:/data-storage:ro
       - ./model-storage:/model-storage:ro
     restart: unless-stopped
-  
+
   frontend:
     build: ./frontend
     container_name: cancer-frontend
+    environment:
+      - BACKEND_URL="http://backend:8000"
     ports:
       - "80:8501"
     restart: unless-stopped

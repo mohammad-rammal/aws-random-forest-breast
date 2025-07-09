@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import os
 
 # Custom CSS
 st.markdown("""
@@ -73,10 +74,13 @@ input_data = {
 st.markdown("### 🔍 Model Input")
 st.json(input_data)
 
+DEFAULT_BACKEND_URL="http://0.0.0.0:8080"
+BACKEND_URL=os.environ.get("BACKEND_URL",DEFAULT_BACKEND_URL)
+
 # Predict button
 if st.button("🚀 Predict"):
     try:
-        response = requests.post("http://192.168.0.103:8000/predict", json=input_data)
+        response = requests.post(f"{BACKEND_URL}/predict", json=input_data)
         prediction = response.json()
         predicted_class = prediction.get("class", "Unknown")
         st.markdown(f'<div class="output-box">🔮 <strong>Prediction Outcome:</strong> {predicted_class}</div>', unsafe_allow_html=True)
