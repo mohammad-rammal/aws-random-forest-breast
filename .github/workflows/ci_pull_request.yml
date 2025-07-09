@@ -1,4 +1,4 @@
-name: fastapi
+name: Run CI on Pull Request to Main
 
 on:
   pull_request:
