@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 import os
 
-# Custom CSS
 st.markdown("""
     <style>
         .main-title {
@@ -39,7 +38,6 @@ st.markdown("""
 
 st.markdown('<div class="main-title">🧬 Breast Cancer Prediction App</div>', unsafe_allow_html=True)
 
-# Two-column layout for better UI
 col1, col2 = st.columns(2)
 
 with col1:
@@ -55,7 +53,6 @@ with col2:
     normal_nucleoli = st.slider("Normal Nucleoli", 1, 10, 5)
     mitoses = st.slider("Mitoses", 1, 10, 5)
 
-# Data formatting
 input_data = {
     "features": [
         clump_thickness,
@@ -70,14 +67,12 @@ input_data = {
     ]
 }
 
-# Show input
 st.markdown("### 🔍 Model Input")
 st.json(input_data)
 
 DEFAULT_BACKEND_URL="http://0.0.0.0:8080"
 BACKEND_URL=os.environ.get("BACKEND_URL",DEFAULT_BACKEND_URL)
 
-# Predict button
 if st.button("🚀 Predict"):
     try:
         response = requests.post(f"{BACKEND_URL}/predict", json=input_data)
