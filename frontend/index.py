@@ -36,6 +36,8 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+st.set_page_config(page_title="Breast Cancer Prediction", page_icon="🧬")
+
 st.markdown(
     '<div class="main-title">🧬 Breast Cancer Prediction App</div><br>'
     '<div style="font-size:18px;">🚀 Running on AWS EC2 Server</div>',
