@@ -9,10 +9,10 @@ st.markdown("""
             font-weight: bold;
             color: #FF4B4B;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
             .second-title {
-            font-size: 30px;
+            font-size: 25px;
             color: #F16B4B;
             text-align: center;
             margin-bottom: 30px;
@@ -45,7 +45,7 @@ st.markdown("""
 st.set_page_config(page_title="Breast Cancer Prediction", page_icon="🧬")
 
 st.markdown('<div class="main-title">🧬 Breast Cancer Prediction App</div>',unsafe_allow_html=True)
-st.markdown('<div class="second-title">Running on AWS EC2 Server</div>',unsafe_allow_html=True)
+st.markdown('<div class="second-title">Deployed on AWS EC2</div>',unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 
