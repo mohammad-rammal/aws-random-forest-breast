@@ -9,6 +9,12 @@ st.markdown("""
             font-weight: bold;
             color: #FF4B4B;
             text-align: center;
+            margin-bottom: 10px;
+        }
+            .second-title {
+            font-size: 30px;
+            color: #8F4344;
+            text-align: center;
             margin-bottom: 30px;
         }
         .stSlider > div {
@@ -38,11 +44,8 @@ st.markdown("""
 
 st.set_page_config(page_title="Breast Cancer Prediction", page_icon="🧬")
 
-st.markdown(
-    '<div class="main-title">🧬 Breast Cancer Prediction App</div><br>'
-    '<div style="font-size:18px;">🚀 Running on AWS EC2 Server</div>',
-    unsafe_allow_html=True
-)
+st.markdown('<div class="main-title">🧬 Breast Cancer Prediction App</div><br>',unsafe_allow_html=True)
+st.markdown('<div style="font-size:18px;">🚀 Running on AWS EC2 Server</div>',unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 
