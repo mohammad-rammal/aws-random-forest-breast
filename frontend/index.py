@@ -44,7 +44,7 @@ st.markdown("""
 
 st.set_page_config(page_title="Breast Cancer Prediction", page_icon="🧬")
 
-st.markdown('<div class="main-title">🧬 Breast Cancer Prediction App</div>',unsafe_allow_html=True)
+st.markdown('<div class="main-title">🧬 Breast Cancer Prediction App - July 14, 2025</div>',unsafe_allow_html=True)
 st.markdown('<div class="second-title">Deployed on AWS EC2</div>',unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
